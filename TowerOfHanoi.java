@@ -2,9 +2,9 @@
 * This program solves
 * the Tower of Hanoi riddle.
 *
-* @author  Mr Coxall
+* @author  Felipe Garcia Affonso
 * @version 1.0
-* @since   2021-05-11
+* @since   2021-12-04
 */
 
 import java.util.Scanner;
@@ -26,9 +26,11 @@ final class TowerOfHanoi {
             System.out.println("Move disk 1 from peg " + startPeg + " to peg "
                                + endPeg);
         } else {
-            // ... solve here
-            // assert true is just a place holder for the linter
-            assert true;
+            hanoi(nOfDisks - 1, startPeg, pegNumber - startPeg - endPeg);
+            System.out.println("Move disk " + nOfDisks + " from peg "
+                               + startPeg + " to peg "
+                               + endPeg);
+            hanoi(nOfDisks - 1, pegNumber - startPeg - endPeg, endPeg);
         }
     }
 
