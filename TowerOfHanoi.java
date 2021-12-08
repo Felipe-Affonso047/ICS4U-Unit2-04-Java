@@ -57,5 +57,7 @@ final class TowerOfHanoi {
         } catch (Exception ex) {
             System.err.print("\nThis is not an integer");
         }
+
+        System.out.println("\nDone.");
     }
 }
